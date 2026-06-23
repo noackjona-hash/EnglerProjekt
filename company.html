@@ -1,151 +1,98 @@
-
-<html>
-
+<!DOCTYPE html>
+<html lang="de">
 <head>
-<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
-<title>Unternehmen</title>
-<meta name="GENERATOR" content="Namo WebEditor">
-<meta name="author" content="Nicole">
-<meta name="namo-theme" content="theme\Business_Classic\Speedy">
-<style>
-<!--
-body { background-color:white; color:#000000; font-family:Arial; }
-h1 { color:gray; font-family:Arial; font-size:12; }
-h2 { color:#D96C00; font-family:Arial; font-size:12; }
-p.namo-list { color:maroon; font-family:Arial; font-size:12; }
-p.namo-sublist { color:#DD7400; font-family:Arial; font-size:10; }
-table.namo-table { border-left-color:silver; border-top-color:silver; border-right-color:#707070; border-bottom-color:#707070; }
-table.namo-table td { border-left-color:#707070; border-top-color:#707070; border-right-color:silver; border-bottom-color:silver; }
-table.namo-table th { background-color:silver; border-left-color:#707070; border-top-color:#707070; border-right-color:silver; border-bottom-color:silver; }
-span.namo-link, a:link { color:red; text-decoration:underline; }
-span.namo-visited, a:visited { color:gray; text-decoration:underline; }
-span.namo-active, a:active { color:#FE8B5A; text-decoration:underline; }
-li.namo-list1 { list-style-image:url('nav/bullet1.gif'); }
-li.namo-list2 { list-style-image:url('nav/bullet2.gif'); }
--->
-</style>
-<script language="JavaScript">
-<!--
-function na_change_img_src(name, nsdoc, rpath, preload)
-{ 
-  var img = eval((navigator.appName.indexOf('Netscape', 0) != -1) ? nsdoc+'.'+name : 'document.all.'+name);
-  if (name == '')
-    return;
-  if (img) {
-    img.altsrc = img.src;
-    img.src    = rpath;
-  } 
-}
-
-function na_restore_img_src(name, nsdoc)
-{
-  var img = eval((navigator.appName.indexOf('Netscape', 0) != -1) ? nsdoc+'.'+name : 'document.all.'+name);
-  if (name == '')
-    return;
-  if (img && img.altsrc) {
-    img.src    = img.altsrc;
-    img.altsrc = null;
-  } 
-}
-
-// -->
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unternehmen - Engler GmbH</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
 </head>
+<body>
+    <div class="site-container">
+        
+        <!-- Header & Banner -->
+        <header class="site-header">
+            <div class="logo-container">
+                <img src="Engler_geschnitten.jpg" alt="Engler GmbH Logo" class="header-logo">
+            </div>
+            
+            <!-- Navigation -->
+            <nav class="main-navigation" aria-label="Hauptnavigation">
+                <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="MenÃ¼ Ã¶ffnen/schlieÃŸen">
+                    <span class="hamburger-icon"></span>
+                </button>
+                <ul id="nav-menu" class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="company.html" class="active">Unternehmen</a></li>
+                    <li><a href="product.html">Fertigung</a></li>
+                    <li><a href="customer.html">Support</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </header>
 
-<body background="images/nth_theme_business_classic_speedy_bg.gif" bgcolor="#9FDEF7" text="black" link="#8000FF" vlink="gray" alink="#0080C0">
-<table cellpadding="0" cellspacing="0" width="750" align="center">
-    <tr>
-        <td width="750" colspan="2">
-            <p align="center"><img src="Engler_geschnitten.jpg" width="750" height="147" border="0"></p>
-            <p>&nbsp;</p>
-<!--NAMO_NAVBAR_START B h L       -1 1 14 4 3 5 -->
-<div align="left">
-<font size="3" color="#666666">[Unternehmen]</font></div>
-<!--NAMO_NAVBAR_END--></td>
-    </tr>
-    <tr>
-        <td width="750" colspan="2"><!--NAMO_NAVBAR_START T H C       -1 6 2 4 3 5 -->
-<div align="center">
-<img src="nav/nav_6_company_thh.gif" name="nav_company_TH0" 
-border="0" class="namo-hibutton2" alt="Unternehmen" align="texttop"><a href="product.html"  
-onmouseover="na_change_img_src('nav_company_TH1', 'document', 'nav/nav_6_product_thr.gif', true);"
-onmouseout="na_restore_img_src('nav_company_TH1', 'document');"><img src="nav/nav_6_product_th.gif" name="nav_company_TH1" 
-border="0" class="namo-button2" alt="Fertigung" align="texttop"></a><a href="customer.html"  
-onmouseover="na_change_img_src('nav_company_TH2', 'document', 'nav/nav_6_customer_thr.gif', true);"
-onmouseout="na_restore_img_src('nav_company_TH2', 'document');"><img src="nav/nav_6_customer_th.gif" name="nav_company_TH2" 
-border="0" class="namo-button2" alt="Support" align="texttop"></a><a href="contact.html"  
-onmouseover="na_change_img_src('nav_company_TH3', 'document', 'nav/nav_6_contact_thr.gif', true);"
-onmouseout="na_restore_img_src('nav_company_TH3', 'document');"><img src="nav/nav_6_contact_th.gif" name="nav_company_TH3" 
-border="0" class="namo-button2" alt="Kontakt" align="texttop"></a></div>
-<!--NAMO_NAVBAR_END--><hr width="750">
-        </td>
-    </tr>
-    <tr>
-        <td width="125" valign="top" rowspan="2"><!--NAMO_NAVBAR_START C V         -1 7 2 4 3 5 -->
-<div>
-<a href="history.html"  
-onmouseover="na_change_img_src('nav_company_CV0', 'document', 'nav/nav_7_history_cvr.gif', true);"
-onmouseout="na_restore_img_src('nav_company_CV0', 'document');"><img src="nav/nav_7_history_cv.gif" name="nav_company_CV0" 
-border="0" class="namo-button1" alt="Geschichte" align="texttop"></a>&nbsp;<br>
-<a href="vision.html"  
-onmouseover="na_change_img_src('nav_company_CV1', 'document', 'nav/nav_7_vision_cvr.gif', true);"
-onmouseout="na_restore_img_src('nav_company_CV1', 'document');"><img src="nav/nav_7_vision_cv.gif" name="nav_company_CV1" 
-border="0" class="namo-button1" alt="Qualifikationen" align="texttop"></a>&nbsp;<br>
-<a href="jobs.html"  
-onmouseover="na_change_img_src('nav_company_CV2', 'document', 'nav/nav_7_jobs_cvr.gif', true);"
-onmouseout="na_restore_img_src('nav_company_CV2', 'document');"><img src="nav/nav_7_jobs_cv.gif" name="nav_company_CV2" 
-border="0" class="namo-button1" alt="Karriere" align="texttop"></a><a name="anchor_menu0">&nbsp;</a><br>
-</div>
-<!--NAMO_NAVBAR_END--></td>
-        <td width="668"><!--NAMO_NAVBAR_START I h         -1 6 2 4 3 5 -->
-<div>
-[<a href="index.html"  onmouseover="" onmouseout="">Home</a>][Unternehmen]</div>
-<!--NAMO_NAVBAR_END--></td>
-    </tr>
-    <tr>
-        <td width="625" align="center">
-            <p>&nbsp;  </p>
-            <table align="center" cellpadding="0" cellspacing="0" width="590">
-                <tr>
-                    <td width="213">
-                        <p align="center"><img src="20140103_104154.jpg" width="205" height="153" border="0"></p>
-                    </td>
-                    <td width="377">
-                        <p align="center">&nbsp;</p>
-                        <h3 align="left"><i>&nbsp;&nbsp;</i></h3>
-                        <h3 align="left"><i>&nbsp;&nbsp;&nbsp;Die Engler GmbH</i></h3>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="590" colspan="2">
-                        <h4 class="namo-list" align="center">&nbsp;</h4>
-                        <h4 class="namo-list" align="center"><span style="font-size:12pt;">ist ein Betrieb mit derzeit 10 Mitarbeitern.</span></h4>
-                        <h4 class="namo-list" align="center"><span style="font-size:12pt;">Hauptsächlich&nbsp;stellen wir Dreh- und Frästeile sowie Schweißkonstruktionen nach Zeichnungen her.</span></h4>
-                        <h4 class="namo-list" align="center"><span style="font-size:12pt;">Zu unseren Kunden zählen wir Firmen aus den Bereichen:</span></h4>
-                        <h4 class="namo-list" align="center"><span style="font-size:12pt;">Apparatebau, Fahrzeugbau, Kunststofftechnik, Lebensmittelbereichen, Maschinenbau, Rohrleitungsbau sowie Werkzeugbau.</span></h4>
-                    </td>
-                </tr>
-            </table>
-            <p align="center"><img src="images/nth_theme_business_classic_speedy_hr.gif" border="0" class="namo-hr"></p>
-<!--NAMO_NAVBAR_START T h C h     -1 6 2 4 3 5 -->
-<div align="center">
-[<a href="index.html"  onmouseover="" onmouseout="">Home</a>][Unternehmen][<a href="product.html"  onmouseover="" onmouseout="">Fertigung</a>][<a href="customer.html"  onmouseover="" onmouseout="">Support</a>][<a href="contact.html"  onmouseover="" onmouseout="">Kontakt</a>]</div>
-<!--NAMO_NAVBAR_END--><hr>
-<!--NAMO_SHARED_CONTENTS_START name="NamoCopy" time="6475f490,1d03bac"-->
-<p><font size="2">Copyright (c) 2008 - 2015. Alle Rechte vorbehalten.</font></p><!--NAMO_SHARED_CONTENTS_END-->
-<!--NAMO_SHARED_CONTENTS_START name="NamoEMail" time="cfdf4d0,1d003dd"-->
-<p><font size="2"><a href="mailto:EnglerGmbH@t-online.de">EnglerGmbH @ t-online.de</a></font></p><!--NAMO_SHARED_CONTENTS_END--></td>
-</tr>
-</table>
-<p>&nbsp;
+        <!-- Main Content Grid -->
+        <main class="site-content">
+            <div class="content-grid">
+                
+                <!-- Sidebar -->
+                <aside class="sidebar-navigation">
+                    <div class="sidebar-title">Unternehmen</div>
+                    <ul class="sidebar-menu">
+                        <li><a href="history.html">Geschichte</a></li>
+                        <li><a href="vision.html">Qualifikationen</a></li>
+                        <li><a href="jobs.html">Karriere</a></li>
+                    </ul>
+                </aside>
+                
+                <!-- Main Content Area -->
+                <section class="main-body">
+                    <div class="page-indicator">
+                        [<a href="index.html">Home</a>][Unternehmen]
+                    </div>
+                    
+                    <div class="hero-section">
+                        <img src="20140103_104154.jpg" alt="Die Engler GmbH" class="hero-image">
+                    </div>
+                    
+                    <h1>Die Engler GmbH</h1>
+                    <div class="accent-divider"></div>
+                    
+                    <p>ist ein Betrieb mit derzeit 10 Mitarbeitern.</p>
+                    <p>HauptsÃ¤chlich stellen wir Dreh- und FrÃ¤steile sowie SchweiÃŸkonstruktionen nach Zeichnungen her.</p>
+                    
+                    <h3>Zu unseren Kunden zÃ¤hlen wir Firmen aus den Bereichen:</h3>
+                    <ul class="custom-list">
+                        <li>Apparatebau</li>
+                        <li>Fahrzeugbau</li>
+                        <li>Kunststofftechnik</li>
+                        <li>Lebensmittelbereichen</li>
+                        <li>Maschinenbau</li>
+                        <li>Rohrleitungsbau</li>
+                        <li>Werkzeugbau</li>
+                    </ul>
+                </section>
+                
+            </div>
+        </main>
 
+        <!-- Footer -->
+        <footer class="site-footer">
+            <nav class="footer-navigation" aria-label="Footernavigation">
+                <ul>
+                    <li><a href="company.html">Unternehmen</a></li>
+                    <li><a href="product.html">Fertigung</a></li>
+                    <li><a href="customer.html">Support</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                    <li><a href="agb202309.pdf" target="_blank">AGB</a></li>
+                </ul>
+            </nav>
+            <div class="footer-info">
+                <p>Copyright &copy; 2008 - 2015. Alle Rechte vorbehalten.</p>
+                <p><a href="mailto:EnglerGmbH@t-online.de">EnglerGmbH @ t-online.de</a></p>
+            </div>
+        </footer>
 
-
-</p>
+    </div>
 </body>
-
 </html>
-
-
-
-

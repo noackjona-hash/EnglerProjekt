@@ -1,121 +1,77 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="de">
 <head>
-<title>Support</title>
-<meta name="GENERATOR" content="Namo WebEditor">
-<meta name="author" content="Nicole">
-<meta name="namo-theme" content="theme\Business_Classic\Speedy">
-<style>
-<!--
-body { background-color:white; color:#000000; font-family:Arial; }
-h1 { color:gray; font-family:Arial; font-size:12; }
-h2 { color:#D96C00; font-family:Arial; font-size:12; }
-p.namo-list { color:maroon; font-family:Arial; font-size:12; }
-p.namo-sublist { color:#DD7400; font-family:Arial; font-size:10; }
-table.namo-table { border-left-color:silver; border-top-color:silver; border-right-color:#707070; border-bottom-color:#707070; }
-table.namo-table td { border-left-color:#707070; border-top-color:#707070; border-right-color:silver; border-bottom-color:silver; }
-table.namo-table th { background-color:silver; border-left-color:#707070; border-top-color:#707070; border-right-color:silver; border-bottom-color:silver; }
-span.namo-link, a:link { color:red; text-decoration:underline; }
-span.namo-visited, a:visited { color:gray; text-decoration:underline; }
-span.namo-active, a:active { color:#FE8B5A; text-decoration:underline; }
-li.namo-list1 { list-style-image:url('nav/bullet1.gif'); }
-li.namo-list2 { list-style-image:url('nav/bullet2.gif'); }
--->
-</style>
-<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
-<script language="JavaScript">
-<!--
-function na_change_img_src(name, nsdoc, rpath, preload)
-{ 
-  var img = eval((navigator.appName.indexOf('Netscape', 0) != -1) ? nsdoc+'.'+name : 'document.all.'+name);
-  if (name == '')
-    return;
-  if (img) {
-    img.altsrc = img.src;
-    img.src    = rpath;
-  } 
-}
-
-function na_restore_img_src(name, nsdoc)
-{
-  var img = eval((navigator.appName.indexOf('Netscape', 0) != -1) ? nsdoc+'.'+name : 'document.all.'+name);
-  if (name == '')
-    return;
-  if (img && img.altsrc) {
-    img.src    = img.altsrc;
-    img.altsrc = null;
-  } 
-}
-
-// -->
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Engler GmbH</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
 </head>
+<body>
+    <div class="site-container">
+        
+        <!-- Header & Banner -->
+        <header class="site-header">
+            <div class="logo-container">
+                <img src="Engler_geschnitten.jpg" alt="Engler GmbH Logo" class="header-logo">
+            </div>
+            
+            <!-- Navigation -->
+            <nav class="main-navigation" aria-label="Hauptnavigation">
+                <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Menü öffnen/schließen">
+                    <span class="hamburger-icon"></span>
+                </button>
+                <ul id="nav-menu" class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="company.html">Unternehmen</a></li>
+                    <li><a href="product.html">Fertigung</a></li>
+                    <li><a href="customer.html" class="active">Support</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </header>
 
-<body background="images/nth_theme_business_classic_speedy_bg.gif" bgcolor="#9FDEF7" text="black" link="#8000FF" vlink="gray" alink="#0080C0">
-<table cellpadding="0" cellspacing="0" width="750" align="center">
-    <tr>
-        <td width="750" colspan="2">
-            <p><img src="Engler_geschnitten.jpg" width="750" height="147" border="0"></p>
-            <p>&nbsp;</p>
-<!--NAMO_NAVBAR_START B h L       -1 1 14 4 3 5 -->
-<div align="left">
-<font size="3" color="#666666">[Support]</font></div>
-<!--NAMO_NAVBAR_END--></td>
-    </tr>
-    <tr>
-        <td width="750" colspan="2"><!--NAMO_NAVBAR_START T H C       -1 6 2 4 3 5 -->
-<div align="center">
-<a href="company.html"  
-onmouseover="na_change_img_src('nav_customer_TH0', 'document', 'nav/nav_6_company_thr.gif', true);"
-onmouseout="na_restore_img_src('nav_customer_TH0', 'document');"><img src="nav/nav_6_company_th.gif" name="nav_customer_TH0" 
-border="0" class="namo-button2" alt="Unternehmen" align="texttop"></a><a href="product.html"  
-onmouseover="na_change_img_src('nav_customer_TH1', 'document', 'nav/nav_6_product_thr.gif', true);"
-onmouseout="na_restore_img_src('nav_customer_TH1', 'document');"><img src="nav/nav_6_product_th.gif" name="nav_customer_TH1" 
-border="0" class="namo-button2" alt="Fertigung" align="texttop"></a><img src="nav/nav_6_customer_thh.gif" name="nav_customer_TH2" 
-border="0" class="namo-hibutton2" alt="Support" align="texttop"><a href="contact.html"  
-onmouseover="na_change_img_src('nav_customer_TH3', 'document', 'nav/nav_6_contact_thr.gif', true);"
-onmouseout="na_restore_img_src('nav_customer_TH3', 'document');"><img src="nav/nav_6_contact_th.gif" name="nav_customer_TH3" 
-border="0" class="namo-button2" alt="Kontakt" align="texttop"></a></div>
-<!--NAMO_NAVBAR_END--><hr width="750">
-        </td>
-    </tr>
-    <tr>
-        <td width="125" valign="top" height="18">
-            <p>&nbsp;  </p>
-        </td>
-        <td width="625"><!--NAMO_NAVBAR_START I h         -1 6 2 4 3 5 -->
-<div>
-[<a href="index.html"  onmouseover="" onmouseout="">Home</a>][Support]</div>
-<!--NAMO_NAVBAR_END--></td>
-    </tr>
-    <tr>
-        <td width="750" valign="top" colspan="2" align="center">
-            <p>&nbsp;</p>
-            <p>�berall auf der Welt gibt es Menschen, die auf unsere Hilfe angewiesen sind.</p>
-            <p>Uns liegt vor allem das Wohl der Kinder und Jugendlichen am Herzen.</p>
-            <p>Seit vielen Jahren unterst�tzen wir in Keltern ans�ssige Vereine durch Zuwendungen</p>
-            <p>auf verschiedenste Art und Weise.</p>
-            <p align="center">&nbsp;  <img src="images/nth_theme_business_classic_speedy_hr.gif" border="0" class="namo-hr"></p>
-<!--NAMO_NAVBAR_START T h C h     -1 6 2 4 3 5 -->
-<div align="center">
-[<a href="index.html"  onmouseover="" onmouseout="">Home</a>][<a href="company.html"  onmouseover="" onmouseout="">Unternehmen</a>][<a href="product.html"  onmouseover="" onmouseout="">Fertigung</a>][Support][<a href="contact.html"  onmouseover="" onmouseout="">Kontakt</a>]</div>
-<!--NAMO_NAVBAR_END--><hr width="750">
-<!--NAMO_SHARED_CONTENTS_START name="NamoCopy" time="709336c0,1d03bc0"-->
-<p><font size="2">Copyright (c) 2008 - 2015. Alle Rechte vorbehalten.</font></p><!--NAMO_SHARED_CONTENTS_END-->
-<!--NAMO_SHARED_CONTENTS_START name="NamoEMail" time="930820a0,1d003e2"-->
-        <p><font size="2"><a href="mailto:EnglerGmbH@t-online.de">EnglerGmbH @ t-online.de</a></font></p>
-<!--NAMO_SHARED_CONTENTS_END--></td>
-</tr>
-</table>
-<p>&nbsp;
+        <!-- Main Content -->
+        <main class="site-content">
+            <div class="page-indicator">
+                [<a href="index.html">Home</a>][Support]
+            </div>
+            
+            <section class="welcome-section" style="max-width: 800px;">
+                <h1>Support & Engagement</h1>
+                <div class="accent-divider divider-center"></div>
+                
+                <div class="company-card" style="text-align: center; line-height: 2;">
+                    <p style="font-size: 1.15rem; margin-bottom: 1.5rem;">
+                        Überall auf der Welt gibt es Menschen, die auf unsere Hilfe angewiesen sind.
+                    </p>
+                    <p style="font-size: 1.15rem; margin-bottom: 1.5rem; font-weight: 500; color: var(--color-primary);">
+                        Uns liegt vor allem das Wohl der Kinder und Jugendlichen am Herzen.
+                    </p>
+                    <p style="font-size: 1.15rem;">
+                        Seit vielen Jahren unterstützen wir in Keltern ansässige Vereine durch Zuwendungen auf verschiedenste Art und Weise.
+                    </p>
+                </div>
+            </section>
+        </main>
 
+        <!-- Footer -->
+        <footer class="site-footer">
+            <nav class="footer-navigation" aria-label="Footernavigation">
+                <ul>
+                    <li><a href="company.html">Unternehmen</a></li>
+                    <li><a href="product.html">Fertigung</a></li>
+                    <li><a href="customer.html">Support</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                    <li><a href="agb202309.pdf" target="_blank">AGB</a></li>
+                </ul>
+            </nav>
+            <div class="footer-info">
+                <p>Copyright &copy; 2008 - 2015. Alle Rechte vorbehalten.</p>
+                <p><a href="mailto:EnglerGmbH@t-online.de">EnglerGmbH @ t-online.de</a></p>
+            </div>
+        </footer>
 
-
-</p>
+    </div>
 </body>
-
 </html>
-
-
-
-

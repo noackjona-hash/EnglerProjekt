@@ -1,0 +1,775 @@
+/* ==========================================================================
+   Modern CSS Design System - Engler GmbH
+   ========================================================================== */
+
+/* Import modern sans-serif font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    /* Color Palette */
+    --color-bg: #f8fafc;            /* Clean slate light gray background */
+    --color-surface: #ffffff;       /* Pure white for containers/cards */
+    --color-primary: #0f172a;       /* Slate 900 - headers & dark sections */
+    --color-primary-light: #1e293b; /* Slate 800 - header elements */
+    --color-secondary: #475569;     /* Slate 600 - body text */
+    --color-accent: #d97706;        /* Amber 600 - industrial orange accent */
+    --color-accent-hover: #b45309;  /* Amber 700 - hover state */
+    --color-accent-light: #fef3c7;  /* Amber 100 - active backgrounds */
+    --color-border: #e2e8f0;        /* Slate 200 - subtle dividers */
+    --color-text: #1e293b;          /* Slate 800 - primary text */
+    --color-text-light: #64748b;    /* Slate 500 - secondary text */
+
+    /* Typography & Spacing */
+    --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --max-width: 1000px;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+    --box-shadow-hover: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --transition-speed: 0.25s;
+}
+
+/* Base Reset & Styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Layout Container */
+.site-container {
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--color-surface);
+    box-shadow: 0 0 20px rgb(0 0 0 / 0.08);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header & Banner */
+.site-header {
+    background-color: var(--color-surface);
+    border-bottom: 2px solid var(--color-border);
+}
+
+.logo-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.header-logo {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Main Navigation */
+.main-navigation {
+    position: relative;
+    background-color: var(--color-primary-light);
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-menu li a {
+    display: block;
+    padding: 1rem 1.5rem;
+    color: #f1f5f9;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all var(--transition-speed) ease;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+    color: #ffffff;
+    border-bottom-color: var(--color-accent);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Mobile Nav Toggle (Hamburger) */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    width: 100%;
+    text-align: right;
+}
+
+.hamburger-icon {
+    display: inline-block;
+    width: 24px;
+    height: 2px;
+    background-color: #ffffff;
+    position: relative;
+    transition: background-color var(--transition-speed) ease;
+    vertical-align: middle;
+}
+
+.hamburger-icon::before,
+.hamburger-icon::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: #ffffff;
+    transition: transform var(--transition-speed) ease;
+}
+
+.hamburger-icon::before {
+    top: -8px;
+    left: 0;
+}
+
+.hamburger-icon::after {
+    bottom: -8px;
+    left: 0;
+}
+
+/* Hamburger active transformation */
+.nav-toggle[aria-expanded="true"] .hamburger-icon {
+    background-color: transparent;
+}
+
+.nav-toggle[aria-expanded="true"] .hamburger-icon::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.nav-toggle[aria-expanded="true"] .hamburger-icon::after {
+    transform: rotate(-45deg);
+    bottom: 0;
+}
+
+/* Page Layout Structure */
+.site-content {
+    flex-grow: 1;
+    padding: 2.5rem;
+}
+
+/* Layout for Pages with Sidebar */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .content-grid {
+        grid-template-columns: 220px 1fr;
+    }
+}
+
+/* Sidebar Navigation */
+.sidebar-navigation {
+    background-color: var(--color-bg);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+}
+
+.sidebar-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-light);
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.sidebar-menu {
+    list-style: none;
+}
+
+.sidebar-menu li {
+    margin-bottom: 0.5rem;
+}
+
+.sidebar-menu li a {
+    display: block;
+    padding: 0.6rem 0.8rem;
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    border-radius: 4px;
+    border-left: 3px solid transparent;
+    transition: all var(--transition-speed) ease;
+}
+
+.sidebar-menu li a:hover {
+    background-color: rgba(217, 119, 6, 0.08);
+    color: var(--color-accent-hover);
+    border-left-color: var(--color-accent);
+    padding-left: 1rem;
+}
+
+.sidebar-menu li a.active {
+    background-color: var(--color-accent-light);
+    color: var(--color-accent-hover);
+    border-left-color: var(--color-accent);
+    font-weight: 600;
+}
+
+/* Main Content Area */
+.main-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Breadcrumbs / Page Indicators */
+.page-indicator {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    margin-bottom: 0.5rem;
+}
+
+.page-indicator a {
+    color: var(--color-text-light);
+    text-decoration: none;
+}
+
+.page-indicator a:hover {
+    color: var(--color-accent);
+}
+
+/* Typography Styles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sans);
+    color: var(--color-primary);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-accent);
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: var(--color-secondary);
+}
+
+/* Custom Dividers */
+.accent-divider {
+    width: 60px;
+    height: 4px;
+    background-color: var(--color-accent);
+    margin: 1.5rem 0;
+    border-radius: 2px;
+}
+
+.divider-center {
+    margin: 1.5rem auto;
+}
+
+/* Hero Section */
+.hero-section {
+    width: 100%;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.hero-section:hover .hero-image {
+    transform: scale(1.02);
+}
+
+/* Welcome Section */
+.welcome-section {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.welcome-section h1 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.company-card {
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-top: 1.5rem;
+    box-shadow: var(--box-shadow);
+}
+
+.company-name {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.company-address {
+    font-style: normal;
+    font-size: 1.05rem;
+    color: var(--color-secondary);
+    line-height: 1.8;
+}
+
+.company-address a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.company-address a:hover {
+    color: var(--color-accent);
+}
+
+/* Machines & Lists Cards (For Drehen, Fräsen, Schweißen pages) */
+.machine-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.machine-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    align-items: center;
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.machine-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--box-shadow-hover);
+}
+
+@media (min-width: 576px) {
+    .machine-card {
+        grid-template-columns: 140px 1fr;
+    }
+}
+
+.machine-img-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.machine-img-container img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.machine-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.machine-title {
+    font-size: 1.25rem;
+    color: var(--color-primary);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 0.25rem;
+}
+
+.machine-details ul {
+    list-style: none;
+}
+
+.machine-details ul li {
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+    position: relative;
+    padding-left: 1.25rem;
+    color: var(--color-secondary);
+}
+
+.machine-details ul li::before {
+    content: "•";
+    color: var(--color-accent);
+    font-weight: bold;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    top: -0.1rem;
+}
+
+/* Detail page specifications grids (e.g. product_1, product_2, product_3) */
+.specs-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .specs-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.spec-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-left: 4px solid var(--color-accent);
+    border-radius: var(--border-radius);
+    padding: 1.25rem;
+    box-shadow: var(--box-shadow);
+    transition: transform var(--transition-speed) ease;
+}
+
+.spec-card:hover {
+    transform: translateY(-2px);
+}
+
+.spec-card h3 {
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+}
+
+.spec-card p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-secondary);
+    display: flex;
+    justify-content: space-between;
+}
+
+.spec-card p strong {
+    color: var(--color-text);
+}
+
+.spec-card ul {
+    list-style-type: none;
+}
+
+.spec-card ul li {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+    color: var(--color-secondary);
+    padding-left: 1rem;
+    position: relative;
+}
+
+.spec-card ul li::before {
+    content: "›";
+    color: var(--color-accent);
+    font-weight: bold;
+    font-size: 1.1rem;
+    position: absolute;
+    left: 0;
+    top: -0.15rem;
+}
+
+/* Standard custom list styles (replaces list images) */
+.custom-list {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.custom-list li {
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+.custom-list li::before {
+    content: "•";
+    color: var(--color-accent);
+    position: absolute;
+    left: 0;
+    font-size: 1.25rem;
+    top: -0.1rem;
+}
+
+/* Navigation buttons back/top/next (e.g. Zurück, Nach oben, Weiter) */
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-border);
+}
+
+.btn-nav {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: all var(--transition-speed) ease;
+}
+
+.btn-nav:hover {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: #ffffff;
+}
+
+/* Table styling for support, contacts, qualifications */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+}
+
+.data-table th,
+.data-table td {
+    padding: 1rem;
+    text-align: left;
+}
+
+.data-table th {
+    background-color: var(--color-primary-light);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.data-table tr {
+    background-color: var(--color-surface);
+    transition: background-color var(--transition-speed) ease;
+}
+
+.data-table tr:nth-child(even) {
+    background-color: var(--color-bg);
+}
+
+.data-table tr:hover {
+    background-color: rgba(217, 119, 6, 0.03);
+}
+
+.data-table td {
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-text);
+    font-size: 0.95rem;
+}
+
+/* Contact information styles */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.contact-box {
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+}
+
+.contact-box h3 {
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 0.5rem;
+}
+
+.contact-details-list {
+    list-style: none;
+}
+
+.contact-details-list li {
+    margin-bottom: 0.75rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-details-list li .label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: var(--color-text-light);
+    font-weight: 700;
+    margin-bottom: 0.15rem;
+}
+
+.contact-details-list li .value {
+    font-size: 1rem;
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+.contact-details-list li a {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-details-list li a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Section */
+.site-footer {
+    background-color: var(--color-primary);
+    color: #cbd5e1;
+    padding: 2.5rem 1.5rem;
+    border-top: 3px solid var(--color-accent);
+    text-align: center;
+}
+
+.footer-navigation {
+    margin-bottom: 1.5rem;
+}
+
+.footer-navigation ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-navigation ul li a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color var(--transition-speed) ease;
+}
+
+.footer-navigation ul li a:hover {
+    color: var(--color-accent);
+}
+
+.footer-info {
+    font-size: 0.85rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-info a {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-info a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Responsive Menu styles for Mobile */
+@media (max-width: 767px) {
+    .site-content {
+        padding: 1.5rem 1rem;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        border-top: 1px solid var(--color-primary);
+    }
+
+    .nav-menu.open {
+        display: flex;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-menu li a {
+        padding: 0.85rem 1rem;
+        border-bottom: none;
+        border-left: 4px solid transparent;
+    }
+
+    .nav-menu li a:hover,
+    .nav-menu li a.active {
+        border-bottom-color: transparent;
+        border-left-color: var(--color-accent);
+        background-color: rgba(255, 255, 255, 0.08);
+    }
+}
