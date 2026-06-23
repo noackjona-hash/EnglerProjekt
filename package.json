@@ -5,13 +5,15 @@
   "main": "main.js",
   "scripts": {
     "build:css": "npx @tailwindcss/cli -i ./input.css -o ./style.css",
-    "watch:css": "npx @tailwindcss/cli -i ./input.css -o ./style.css --watch"
+    "watch:css": "npx @tailwindcss/cli -i ./input.css -o ./style.css --watch",
+    "dev": "concurrently \"npm run watch:css\" \"npx serve -p 3000 .\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@tailwindcss/cli": "^4.3.1",
+    "concurrently": "^10.0.3",
     "tailwindcss": "^4.3.1"
   }
 }
