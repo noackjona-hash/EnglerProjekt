@@ -1,5 +1,5 @@
 /**
- * Engler GmbH - Responsive Navigation Logic
+ * Engler GmbH - Responsive Navigation Logic (Tailwind Compatible)
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -8,20 +8,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (navToggle && navMenu) {
         navToggle.addEventListener('click', () => {
-            const isOpen = navMenu.classList.contains('open');
+            const isHidden = navMenu.classList.contains('hidden');
             
-            // Toggle classes
-            navMenu.classList.toggle('open');
+            // Toggle tailwind hidden class
+            navMenu.classList.toggle('hidden');
             
             // Update ARIA attributes for accessibility
-            navToggle.setAttribute('aria-expanded', !isOpen);
+            navToggle.setAttribute('aria-expanded', isHidden);
         });
 
         // Close menu when clicking outside of it on mobile
         document.addEventListener('click', (event) => {
             const isClickInside = navToggle.contains(event.target) || navMenu.contains(event.target);
-            if (!isClickInside && navMenu.classList.contains('open')) {
-                navMenu.classList.remove('open');
+            if (!isClickInside && !navMenu.classList.contains('hidden')) {
+                navMenu.classList.add('hidden');
                 navToggle.setAttribute('aria-expanded', 'false');
             }
         });

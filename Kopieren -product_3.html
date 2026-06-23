@@ -1,96 +1,85 @@
 <!DOCTYPE html>
+
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produkt 3 - Engler GmbH</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Produkt 3 - Engler GmbH</title>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="main.js"></script>
 </head>
 <body id="top">
-    <div class="site-container">
-        
-        <!-- Header & Banner -->
-        <header class="site-header">
-            <div class="logo-container">
-                <img src="Engler_geschnitten.jpg" alt="Engler GmbH Logo" class="header-logo">
-            </div>
-            
-            <!-- Navigation -->
-            <nav class="main-navigation" aria-label="Hauptnavigation">
-                <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Menü öffnen/schließen">
-                    <span class="hamburger-icon"></span>
-                </button>
-                <ul id="nav-menu" class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="company.html">Unternehmen</a></li>
-                    <li><a href="product.html" class="active">Fertigung</a></li>
-                    <li><a href="customer.html">Support</a></li>
-                    <li><a href="contact.html">Kontakt</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <!-- Main Content Grid -->
-        <main class="site-content">
-            <div class="content-grid">
-                
-                <!-- Sidebar -->
-                <aside class="sidebar-navigation">
-                    <div class="sidebar-title">Fertigung</div>
-                    <ul class="sidebar-menu">
-                        <li><a href="product_1.html">Drehen</a></li>
-                        <li><a href="product_2.html">Fräsen</a></li>
-                        <li><a href="product_3.html">Schweißen</a></li>
-                        <li><a href="Kopieren%20-product_3.html" class="active">Montieren</a></li>
-                    </ul>
-                </aside>
-                
-                <!-- Main Content Area -->
-                <section class="main-body">
-                    <div class="page-indicator">
+<div class="max-w-[1000px] w-full mx-auto bg-white shadow-xl flex flex-col min-h-screen lg:min-h-[calc(100vh-5rem)] lg:rounded-xl overflow-hidden">
+<!-- Header & Banner -->
+<header class="bg-white border-b-2 border-zinc-200">
+<div class="w-full bg-white flex justify-center items-center border-b border-zinc-200 py-5 px-4">
+<img alt="Engler GmbH Logo" class="max-w-[750px] w-full h-auto block" src="Engler_geschnitten.jpg"/>
+</div>
+<!-- Navigation -->
+<nav aria-label="Hauptnavigation" class="relative bg-zinc-800 shadow-sm">
+<button aria-controls="nav-menu" aria-expanded="false" aria-label="Menü öffnen/schließen" class="nav-toggle bg-none border-none p-4 cursor-pointer w-full text-right">
+<span class="hamburger-icon"></span>
+</button>
+<ul class="nav-menu hidden md:flex flex-col md:flex-row justify-center border-t border-zinc-700/50 md:border-t-0 list-none" id="nav-menu">
+<li><a class="nav-link-underline block py-4 px-7 font-headings font-semibold text-sm uppercase tracking-wider hover:text-white hover:bg-white/5 active:text-white transition-all duration-200 text-zinc-400" href="index.html">Home</a></li>
+<li><a class="nav-link-underline block py-4 px-7 font-headings font-semibold text-sm uppercase tracking-wider hover:text-white hover:bg-white/5 active:text-white transition-all duration-200 text-zinc-400" href="company.html">Unternehmen</a></li>
+<li><a class="nav-link-underline block py-4 px-7 font-headings font-semibold text-sm uppercase tracking-wider hover:text-white hover:bg-white/5 active:text-white transition-all duration-200 text-white active" href="product.html">Fertigung</a></li>
+<li><a class="nav-link-underline block py-4 px-7 font-headings font-semibold text-sm uppercase tracking-wider hover:text-white hover:bg-white/5 active:text-white transition-all duration-200 text-zinc-400" href="customer.html">Support</a></li>
+<li><a class="nav-link-underline block py-4 px-7 font-headings font-semibold text-sm uppercase tracking-wider hover:text-white hover:bg-white/5 active:text-white transition-all duration-200 text-zinc-400" href="contact.html">Kontakt</a></li>
+</ul>
+</nav>
+</header>
+<!-- Main Content Grid -->
+<main class="p-8 md:p-10 flex-grow">
+<div class="grid grid-cols-1 md:grid-cols-[220px_1fr] gap-10">
+<!-- Sidebar -->
+<aside class="bg-zinc-50 rounded-lg p-5 border border-zinc-200 self-start shadow-sm">
+<div class="font-headings text-[0.8rem] font-bold uppercase tracking-wider text-zinc-400 mb-3 pb-2 border-b-2 border-zinc-200">Fertigung</div>
+<ul class="list-none">
+<li><a href="product_1.html">Drehen</a></li>
+<li><a href="product_2.html">Fräsen</a></li>
+<li><a href="product_3.html">Schweißen</a></li>
+<li><a class="active" href="Kopieren%20-product_3.html">Montieren</a></li>
+</ul>
+</aside>
+<!-- Main Content Area -->
+<section class="flex flex-col gap-6">
+<div class="text-[0.85rem] font-headings uppercase tracking-wider text-zinc-400 mb-7 pb-2 border-b border-zinc-200 block w-full">
                         [<a href="index.html">Home</a>][<a href="product.html">Fertigung</a>][Montieren]
                     </div>
-                    
-                    <div class="hero-section">
-                        <img src="Bilder%20009.jpg" alt="Montagebereich" class="hero-image">
-                    </div>
-                    
-                    <h1>Montage</h1>
-                    <div class="accent-divider"></div>
-                    
-                    <div class="company-card">
-                        <h3 style="margin-bottom: 1rem; color: var(--color-accent);">Übersicht</h3>
-                        <p>Im Montagebereich haben wir erfahrene Mitarbeiter, die Ihre Anforderungen schnell, unkompliziert und reibungslos umsetzen.</p>
-                    </div>
-                    
-                    <!-- Navigation Buttons -->
-                    <div class="navigation-buttons">
-                        <a href="product_3.html" class="btn-nav">&laquo; Zurück</a>
-                        <a href="#top" class="btn-nav">Nach oben</a>
-                    </div>
-                </section>
-                
-            </div>
-        </main>
-
-        <!-- Footer -->
-        <footer class="site-footer">
-            <nav class="footer-navigation" aria-label="Footernavigation">
-                <ul>
-                    <li><a href="company.html">Unternehmen</a></li>
-                    <li><a href="product.html">Fertigung</a></li>
-                    <li><a href="customer.html">Support</a></li>
-                    <li><a href="contact.html">Kontakt</a></li>
-                    <li><a href="agb202309.pdf" target="_blank">AGB</a></li>
-                </ul>
-            </nav>
-            <div class="footer-info">
-                <p>Copyright &copy; 2008 - 2015. Alle Rechte vorbehalten.</p>
-                <p><a href="mailto:EnglerGmbH@t-online.de">EnglerGmbH @ t-online.de</a></p>
-            </div>
-        </footer>
-
-    </div>
+<div class="w-full mb-8 overflow-hidden rounded-lg shadow-md border border-zinc-200">
+<img alt="Montagebereich" class="w-full h-auto block object-cover transition-transform duration-700 hover:scale-[1.02]" src="Bilder%20009.jpg"/>
+</div>
+<h1>Montage</h1>
+<div class="w-16 h-1 bg-gradient-to-r from-brand-red to-red-400 my-5 rounded-full"></div>
+<div class="bg-white border-t-3 border-brand-red rounded-lg p-8 mt-7 shadow-md border-x border-b border-zinc-200 transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5">
+<h3 style="margin-bottom: 1rem; color: var(--color-accent);">Übersicht</h3>
+<p>Im Montagebereich haben wir erfahrene Mitarbeiter, die Ihre Anforderungen schnell, unkompliziert und reibungslos umsetzen.</p>
+</div>
+<!-- Navigation Buttons -->
+<div class="flex justify-between items-center mt-10 pt-5 border-t border-zinc-200">
+<a class="inline-block py-2.5 px-4.5 bg-zinc-50 border border-zinc-200 text-zinc-700 text-[0.85rem] font-headings font-bold rounded-md transition-all duration-200 cursor-pointer hover:bg-brand-red hover:border-brand-red hover:text-white hover:shadow-sm" href="product_3.html">« Zurück</a>
+<a class="inline-block py-2.5 px-4.5 bg-zinc-50 border border-zinc-200 text-zinc-700 text-[0.85rem] font-headings font-bold rounded-md transition-all duration-200 cursor-pointer hover:bg-brand-red hover:border-brand-red hover:text-white hover:shadow-sm" href="#top">Nach oben</a>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-950 text-zinc-400 py-12 px-6 border-t-3 border-brand-red text-center">
+<nav aria-label="Footernavigation" class="mb-6">
+<ul>
+<li><a href="company.html">Unternehmen</a></li>
+<li><a href="product.html">Fertigung</a></li>
+<li><a href="customer.html">Support</a></li>
+<li><a href="contact.html">Kontakt</a></li>
+<li><a href="agb202309.pdf" target="_blank">AGB</a></li>
+</ul>
+</nav>
+<div class="text-[0.8rem] flex flex-col gap-2.5">
+<p>Copyright © 2008 - 2015. Alle Rechte vorbehalten.</p>
+<p><a href="mailto:EnglerGmbH@t-online.de">EnglerGmbH @ t-online.de</a></p>
+</div>
+</footer>
+</div>
 </body>
 </html>

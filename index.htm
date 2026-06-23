@@ -1,79 +1,72 @@
 <!DOCTYPE html>
+
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Engler GmbH</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Home - Engler GmbH</title>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="main.js"></script>
 </head>
 <body>
-    <div class="site-container">
-        
-        <!-- Header & Banner -->
-        <header class="site-header">
-            <div class="logo-container">
-                <img src="Engler_geschnitten.jpg" alt="Engler GmbH Logo" class="header-logo">
-            </div>
-            
-            <!-- Navigation -->
-            <nav class="main-navigation" aria-label="Hauptnavigation">
-                <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Menü öffnen/schließen">
-                    <span class="hamburger-icon"></span>
-                </button>
-                <ul id="nav-menu" class="nav-menu">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="company.html">Unternehmen</a></li>
-                    <li><a href="product.html">Fertigung</a></li>
-                    <li><a href="customer.html">Support</a></li>
-                    <li><a href="contact.html">Kontakt</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <!-- Main Content -->
-        <main class="site-content">
-            <!-- Current page breadcrumb -->
-            <div class="page-indicator">[Home]</div>
-            
-            <!-- Welcome illustration -->
-            <div class="hero-section">
-                <img src="Engler Start.jpg" alt="Engler GmbH Zerspanungstechnik" class="hero-image">
-            </div>
-            
-            <!-- Welcome Section -->
-            <section class="welcome-section">
-                <h1>Herzlich Willkommen auf der Internetseite der</h1>
-                <div class="accent-divider divider-center"></div>
-                
-                <div class="company-card">
-                    <h2 class="company-name">Engler GmbH</h2>
-                    <address class="company-address">
-                        Dieselstr. 12, 75210 Keltern - Dietlingen<br>
-                        Tel.: <a href="tel:+4972361617">0 72 36 - 16 17</a> oder <a href="tel:+4972361716">17 16</a><br>
+<div class="max-w-[1000px] w-full mx-auto bg-white shadow-xl flex flex-col min-h-screen lg:min-h-[calc(100vh-5rem)] lg:rounded-xl overflow-hidden">
+<!-- Header & Banner -->
+<header class="bg-white border-b-2 border-zinc-200">
+<div class="w-full bg-white flex justify-center items-center border-b border-zinc-200 py-5 px-4">
+<img alt="Engler GmbH Logo" class="max-w-[750px] w-full h-auto block" src="Engler_geschnitten.jpg"/>
+</div>
+<!-- Navigation -->
+<nav aria-label="Hauptnavigation" class="relative bg-zinc-800 shadow-sm">
+<button aria-controls="nav-menu" aria-expanded="false" aria-label="Menü öffnen/schließen" class="nav-toggle bg-none border-none p-4 cursor-pointer w-full text-right">
+<span class="hamburger-icon"></span>
+</button>
+<ul class="nav-menu hidden md:flex flex-col md:flex-row justify-center border-t border-zinc-700/50 md:border-t-0 list-none" id="nav-menu">
+<li><a class="nav-link-underline block py-4 px-7 font-headings font-semibold text-sm uppercase tracking-wider hover:text-white hover:bg-white/5 active:text-white transition-all duration-200 text-white active" href="index.html">Home</a></li>
+<li><a class="nav-link-underline block py-4 px-7 font-headings font-semibold text-sm uppercase tracking-wider hover:text-white hover:bg-white/5 active:text-white transition-all duration-200 text-zinc-400" href="company.html">Unternehmen</a></li>
+<li><a class="nav-link-underline block py-4 px-7 font-headings font-semibold text-sm uppercase tracking-wider hover:text-white hover:bg-white/5 active:text-white transition-all duration-200 text-zinc-400" href="product.html">Fertigung</a></li>
+<li><a class="nav-link-underline block py-4 px-7 font-headings font-semibold text-sm uppercase tracking-wider hover:text-white hover:bg-white/5 active:text-white transition-all duration-200 text-zinc-400" href="customer.html">Support</a></li>
+<li><a class="nav-link-underline block py-4 px-7 font-headings font-semibold text-sm uppercase tracking-wider hover:text-white hover:bg-white/5 active:text-white transition-all duration-200 text-zinc-400" href="contact.html">Kontakt</a></li>
+</ul>
+</nav>
+</header>
+<!-- Main Content -->
+<main class="p-8 md:p-10 flex-grow">
+<!-- Current page breadcrumb -->
+<div class="text-[0.85rem] font-headings uppercase tracking-wider text-zinc-400 mb-7 pb-2 border-b border-zinc-200 block w-full">[Home]</div>
+<!-- Welcome illustration -->
+<div class="w-full mb-8 overflow-hidden rounded-lg shadow-md border border-zinc-200">
+<img alt="Engler GmbH Zerspanungstechnik" class="w-full h-auto block object-cover transition-transform duration-700 hover:scale-[1.02]" src="Engler Start.jpg"/>
+</div>
+<!-- Welcome Section -->
+<section class="text-center max-w-[640px] mx-auto">
+<h1>Herzlich Willkommen auf der Internetseite der</h1>
+<div class="divider-center w-16 h-1 bg-gradient-to-r from-brand-red to-red-400 my-5 rounded-full"></div>
+<div class="bg-white border-t-3 border-brand-red rounded-lg p-8 mt-7 shadow-md border-x border-b border-zinc-200 transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5">
+<h2 class="text-4xl font-extrabold text-zinc-900 mb-4 tracking-tight">Engler GmbH</h2>
+<address class="not-italic text-[1.05rem] text-zinc-600 leading-relaxed">
+                        Dieselstr. 12, 75210 Keltern - Dietlingen<br/>
+                        Tel.: <a href="tel:+4972361617">0 72 36 - 16 17</a> oder <a href="tel:+4972361716">17 16</a><br/>
                         Fax: 0 72 36 - 72 96
                     </address>
-                </div>
-            </section>
-        </main>
-
-        <!-- Footer -->
-        <footer class="site-footer">
-            <nav class="footer-navigation" aria-label="Footernavigation">
-                <ul>
-                    <li><a href="company.html">Unternehmen</a></li>
-                    <li><a href="product.html">Fertigung</a></li>
-                    <li><a href="customer.html">Support</a></li>
-                    <li><a href="contact.html">Kontakt</a></li>
-                    <li><a href="agb202309.pdf" target="_blank">AGB</a></li>
-                </ul>
-            </nav>
-            <div class="footer-info">
-                <p>Copyright &copy; 2008 - 2015. Alle Rechte vorbehalten.</p>
-                <p><a href="mailto:EnglerGmbH@t-online.de">EnglerGmbH @ t-online.de</a></p>
-            </div>
-        </footer>
-
-    </div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-950 text-zinc-400 py-12 px-6 border-t-3 border-brand-red text-center">
+<nav aria-label="Footernavigation" class="mb-6">
+<ul>
+<li><a href="company.html">Unternehmen</a></li>
+<li><a href="product.html">Fertigung</a></li>
+<li><a href="customer.html">Support</a></li>
+<li><a href="contact.html">Kontakt</a></li>
+<li><a href="agb202309.pdf" target="_blank">AGB</a></li>
+</ul>
+</nav>
+<div class="text-[0.8rem] flex flex-col gap-2.5">
+<p>Copyright © 2008 - 2015. Alle Rechte vorbehalten.</p>
+<p><a href="mailto:EnglerGmbH@t-online.de">EnglerGmbH @ t-online.de</a></p>
+</div>
+</footer>
+</div>
 </body>
 </html>

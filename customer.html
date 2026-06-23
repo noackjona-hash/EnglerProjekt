@@ -1,77 +1,71 @@
 <!DOCTYPE html>
+
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support - Engler GmbH</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Support - Engler GmbH</title>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="main.js"></script>
 </head>
 <body>
-    <div class="site-container">
-        
-        <!-- Header & Banner -->
-        <header class="site-header">
-            <div class="logo-container">
-                <img src="Engler_geschnitten.jpg" alt="Engler GmbH Logo" class="header-logo">
-            </div>
-            
-            <!-- Navigation -->
-            <nav class="main-navigation" aria-label="Hauptnavigation">
-                <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Menü öffnen/schließen">
-                    <span class="hamburger-icon"></span>
-                </button>
-                <ul id="nav-menu" class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="company.html">Unternehmen</a></li>
-                    <li><a href="product.html">Fertigung</a></li>
-                    <li><a href="customer.html" class="active">Support</a></li>
-                    <li><a href="contact.html">Kontakt</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <!-- Main Content -->
-        <main class="site-content">
-            <div class="page-indicator">
+<div class="max-w-[1000px] w-full mx-auto bg-white shadow-xl flex flex-col min-h-screen lg:min-h-[calc(100vh-5rem)] lg:rounded-xl overflow-hidden">
+<!-- Header & Banner -->
+<header class="bg-white border-b-2 border-zinc-200">
+<div class="w-full bg-white flex justify-center items-center border-b border-zinc-200 py-5 px-4">
+<img alt="Engler GmbH Logo" class="max-w-[750px] w-full h-auto block" src="Engler_geschnitten.jpg"/>
+</div>
+<!-- Navigation -->
+<nav aria-label="Hauptnavigation" class="relative bg-zinc-800 shadow-sm">
+<button aria-controls="nav-menu" aria-expanded="false" aria-label="Menü öffnen/schließen" class="nav-toggle bg-none border-none p-4 cursor-pointer w-full text-right">
+<span class="hamburger-icon"></span>
+</button>
+<ul class="nav-menu hidden md:flex flex-col md:flex-row justify-center border-t border-zinc-700/50 md:border-t-0 list-none" id="nav-menu">
+<li><a class="nav-link-underline block py-4 px-7 font-headings font-semibold text-sm uppercase tracking-wider hover:text-white hover:bg-white/5 active:text-white transition-all duration-200 text-zinc-400" href="index.html">Home</a></li>
+<li><a class="nav-link-underline block py-4 px-7 font-headings font-semibold text-sm uppercase tracking-wider hover:text-white hover:bg-white/5 active:text-white transition-all duration-200 text-zinc-400" href="company.html">Unternehmen</a></li>
+<li><a class="nav-link-underline block py-4 px-7 font-headings font-semibold text-sm uppercase tracking-wider hover:text-white hover:bg-white/5 active:text-white transition-all duration-200 text-zinc-400" href="product.html">Fertigung</a></li>
+<li><a class="nav-link-underline block py-4 px-7 font-headings font-semibold text-sm uppercase tracking-wider hover:text-white hover:bg-white/5 active:text-white transition-all duration-200 text-white active" href="customer.html">Support</a></li>
+<li><a class="nav-link-underline block py-4 px-7 font-headings font-semibold text-sm uppercase tracking-wider hover:text-white hover:bg-white/5 active:text-white transition-all duration-200 text-zinc-400" href="contact.html">Kontakt</a></li>
+</ul>
+</nav>
+</header>
+<!-- Main Content -->
+<main class="p-8 md:p-10 flex-grow">
+<div class="text-[0.85rem] font-headings uppercase tracking-wider text-zinc-400 mb-7 pb-2 border-b border-zinc-200 block w-full">
                 [<a href="index.html">Home</a>][Support]
             </div>
-            
-            <section class="welcome-section" style="max-width: 800px;">
-                <h1>Support & Engagement</h1>
-                <div class="accent-divider divider-center"></div>
-                
-                <div class="company-card" style="text-align: center; line-height: 2;">
-                    <p style="font-size: 1.15rem; margin-bottom: 1.5rem;">
+<section class="text-center max-w-[640px] mx-auto" style="max-width: 800px;">
+<h1>Support &amp; Engagement</h1>
+<div class="divider-center w-16 h-1 bg-gradient-to-r from-brand-red to-red-400 my-5 rounded-full"></div>
+<div class="bg-white border-t-3 border-brand-red rounded-lg p-8 mt-7 shadow-md border-x border-b border-zinc-200 transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5" style="text-align: center; line-height: 2;">
+<p style="font-size: 1.15rem; margin-bottom: 1.5rem;">
                         Überall auf der Welt gibt es Menschen, die auf unsere Hilfe angewiesen sind.
                     </p>
-                    <p style="font-size: 1.15rem; margin-bottom: 1.5rem; font-weight: 500; color: var(--color-primary);">
+<p style="font-size: 1.15rem; margin-bottom: 1.5rem; font-weight: 500; color: var(--color-primary);">
                         Uns liegt vor allem das Wohl der Kinder und Jugendlichen am Herzen.
                     </p>
-                    <p style="font-size: 1.15rem;">
+<p style="font-size: 1.15rem;">
                         Seit vielen Jahren unterstützen wir in Keltern ansässige Vereine durch Zuwendungen auf verschiedenste Art und Weise.
                     </p>
-                </div>
-            </section>
-        </main>
-
-        <!-- Footer -->
-        <footer class="site-footer">
-            <nav class="footer-navigation" aria-label="Footernavigation">
-                <ul>
-                    <li><a href="company.html">Unternehmen</a></li>
-                    <li><a href="product.html">Fertigung</a></li>
-                    <li><a href="customer.html">Support</a></li>
-                    <li><a href="contact.html">Kontakt</a></li>
-                    <li><a href="agb202309.pdf" target="_blank">AGB</a></li>
-                </ul>
-            </nav>
-            <div class="footer-info">
-                <p>Copyright &copy; 2008 - 2015. Alle Rechte vorbehalten.</p>
-                <p><a href="mailto:EnglerGmbH@t-online.de">EnglerGmbH @ t-online.de</a></p>
-            </div>
-        </footer>
-
-    </div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-950 text-zinc-400 py-12 px-6 border-t-3 border-brand-red text-center">
+<nav aria-label="Footernavigation" class="mb-6">
+<ul>
+<li><a href="company.html">Unternehmen</a></li>
+<li><a href="product.html">Fertigung</a></li>
+<li><a href="customer.html">Support</a></li>
+<li><a href="contact.html">Kontakt</a></li>
+<li><a href="agb202309.pdf" target="_blank">AGB</a></li>
+</ul>
+</nav>
+<div class="text-[0.8rem] flex flex-col gap-2.5">
+<p>Copyright © 2008 - 2015. Alle Rechte vorbehalten.</p>
+<p><a href="mailto:EnglerGmbH@t-online.de">EnglerGmbH @ t-online.de</a></p>
+</div>
+</footer>
+</div>
 </body>
 </html>

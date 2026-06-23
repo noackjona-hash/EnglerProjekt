@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+@theme {
+  --font-headings: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --color-brand-red: #c22d2d;
+  --color-brand-red-hover: #991b1b;
+  --color-brand-red-light: rgba(194, 45, 45, 0.06);
+}
+
+@layer base {
+  body {
+    font-family: var(--font-body);
+    background: linear-gradient(135deg, #f4f4f5 0%, #e4e4e7 100%);
+    color: #3f3f46;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-headings);
+    color: #09090b;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Custom CSS Utilities for Premium Design Effects */
+
+/* Nav link bottom sliding underline line */
+@utility nav-link-underline {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    width: 60%;
+    height: 3px;
+    background-color: var(--color-brand-red);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  &.active::after {
+    transform: scaleX(1);
+    background-color: var(--color-brand-red);
+  }
+}
+
+/* Bullet decoration list points */
+@utility list-checkmark {
+  list-style: none;
+  & li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.95rem;
+    color: #3f3f46;
+    &::before {
+      content: "✓";
+      color: var(--color-brand-red);
+      position: absolute;
+      left: 0;
+      font-weight: 700;
+      font-size: 0.95rem;
+      top: 0.05rem;
+    }
+  }
+}
+
+@utility list-bullet-red {
+  list-style: none;
+  & li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: 0.4rem;
+    font-size: 0.95rem;
+    color: #3f3f46;
+    &::before {
+      content: "•";
+      color: var(--color-brand-red);
+      font-weight: 900;
+      font-size: 1.25rem;
+      position: absolute;
+      left: 0;
+      top: -0.2rem;
+    }
+  }
+}
+
+@utility list-chevron-red {
+  list-style: none;
+  & li {
+    position: relative;
+    padding-left: 1rem;
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+    color: #3f3f46;
+    &::before {
+      content: "›";
+      color: var(--color-brand-red);
+      font-weight: 900;
+      font-size: 1.15rem;
+      position: absolute;
+      left: 0;
+      top: -0.25rem;
+    }
+  }
+}
+
+/* Responsive Hamburger Icon Styling */
+.nav-toggle {
+  display: none;
+}
+@media (max-width: 767px) {
+  .nav-toggle {
+    display: block;
+  }
+}
+.hamburger-icon {
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background-color: #ffffff;
+  position: relative;
+  transition: background-color 0.25s ease;
+  vertical-align: middle;
+}
+.hamburger-icon::before,
+.hamburger-icon::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: #ffffff;
+  transition: transform 0.25s ease;
+}
+.hamburger-icon::before {
+  top: -8px;
+  left: 0;
+}
+.hamburger-icon::after {
+  bottom: -8px;
+  left: 0;
+}
+.nav-toggle[aria-expanded="true"] .hamburger-icon {
+  background-color: transparent;
+}
+.nav-toggle[aria-expanded="true"] .hamburger-icon::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+.nav-toggle[aria-expanded="true"] .hamburger-icon::after {
+  transform: rotate(-45deg);
+  bottom: 0;
+}
